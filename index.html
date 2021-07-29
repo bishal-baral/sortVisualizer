@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script defer="" src="src/js/main.js"></script>
+
+    <title>Visualize Sorting Algorithms</title>
+  </head>
+  <body>
+    <div class="sort-container">
+      <header class="header">
+        <h1 class="page-title">Sort Visualizer</h1>
+      </header>
+      <div class="content">
+        <div class="sidebar">
+          <div>
+            <ul class="sidebar__container">
+              <li class="sidebar__btn btn-new-array">Generate new Array</li>
+              <li class="sidebar__btn btn-bubble-sort">Bubble Sort</li>
+              <li class="sidebar__btn btn-insertion-sort">Insertion Sort</li>
+              <li class="sidebar__btn btn-selection-sort">Selection Sort</li>
+              <li class="sidebar__btn btn-quick-sort">Quick Sort</li>
+              <li class="sidebar__btn btn-merge-sort">Merge Sort</li>
+            </ul>
+          </div>
+        </div>
+        <main class="array-container">
+          <div id="array-bars"></div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,9 +1,9 @@
-import { async } from "regenerator-runtime";
 import {
   timeoutPromise,
   scaleBarBy,
   barHeightInt,
   changeBarColor,
+  wobbleNewArrayButton,
 } from "../helper";
 import { TIME } from "../config";
 
@@ -33,4 +33,6 @@ export const insertionSort = async function () {
     arrayBarList[j + 1].style.height = target;
     changeBarColor(arrayBarList[i], "green");
   }
+  arrayBarList.forEach((bar) => changeBarColor(bar, "turquoise"));
+  wobbleNewArrayButton();
 };

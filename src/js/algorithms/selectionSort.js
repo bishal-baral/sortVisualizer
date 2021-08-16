@@ -4,6 +4,7 @@ import {
   scaleBarBy,
   barHeightInt,
   changeBarColor,
+  wobbleNewArrayButton,
 } from "../helper";
 import { TIME } from "../config";
 
@@ -16,7 +17,6 @@ export const selectionSort = async function () {
     changeBarColor(arrayBarList[i], "blue");
 
     for (let j = i + 1; j < arrayBarList.length; j++) {
-      // changeBarColor(arrayBarList[j], "blue");
       changeBarColor(arrayBarList[j], "red");
       await timeoutPromise(TIME);
       if (
@@ -28,11 +28,10 @@ export const selectionSort = async function () {
         changeBarColor(arrayBarList[j], "black");
       }
     }
-    // await timeoutPromise(TIME);
-
     swapHeight(arrayBarList[i], arrayBarList[min_index]);
     changeBarColor(arrayBarList[min_index], "black");
     changeBarColor(arrayBarList[i], "green");
   }
-  // arrayBarList[].style.backgroundColor = "green";
+  arrayBarList.forEach((bar) => changeBarColor(bar, "turquoise"));
+  wobbleNewArrayButton();
 };

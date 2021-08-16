@@ -1,3 +1,9 @@
+const newArrayButton = document.querySelector(".btn-new-array");
+
+export const wobbleNewArrayButton = () => {
+  newArrayButton.classList.add("wobble");
+};
+
 export const randomIntFromInterval = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };

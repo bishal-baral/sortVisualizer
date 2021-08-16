@@ -4,17 +4,19 @@ import {
   scaleBarBy,
   barHeightInt,
   changeBarColor,
+  wobbleNewArrayButton,
 } from "../helper";
 import { TIME } from "../config";
-import { async } from "regenerator-runtime";
 
 export const quickSort = async function () {
   const arrayBarList = document.querySelectorAll(".array-bar");
   await callQuickSort(arrayBarList, 0, arrayBarList.length - 1);
   arrayBarList.forEach((bar) => changeBarColor(bar, "turquoise"));
+  wobbleNewArrayButton();
 };
 
 async function callQuickSort(arrayBarList, low, high) {
+  scaleBarBy(arrayBarList, 1.3);
   if (low < high) {
     const pivotLocation = await partition(arrayBarList, low, high);
     await callQuickSort(arrayBarList, low, pivotLocation - 1);

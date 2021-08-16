@@ -1,9 +1,15 @@
-# Sort Visualizer Project
+# Sort Visualizer
 
 A visualizer for some common sorting algorithms.
 
 Built using Javascript, SASS and HTML.
 
-- will be adding some more features soon!
+Sorting Algorithms
 
-live at https://sort-visua1zer.netlify.app/
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
+- Quick Sort
+- Merge Sort
+
+Live at: https://sort-visua1zer.netlify.app/

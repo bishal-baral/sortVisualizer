@@ -1,24 +1,22 @@
 import {
-  swapHeight,
   timeoutPromise,
-  scaleBarBy,
-  barHeightInt,
   changeBarColor,
+  wobbleNewArrayButton,
+  scaleBarBy,
 } from "../helper";
 import { TIME } from "../config";
-import { async } from "regenerator-runtime";
-
-let count = 0;
 
 export const mergeSort = async function () {
   const arrayBarList = document.querySelectorAll(".array-bar");
 
   await callMergeSort(arrayBarList, 0, arrayBarList.length - 1);
-  arrayBarList.forEach((bar) => console.log(barHeightInt(bar)));
-  console.log("count" + count);
+  arrayBarList.forEach((bar) => changeBarColor(bar, "turquoise"));
+  wobbleNewArrayButton();
 };
 
 async function callMergeSort(arrayBarList, left, right) {
+  scaleBarBy(arrayBarList, 1.3);
+
   if (left < right) {
     const mid = left + parseInt((right - left) / 2);
 
